@@ -27,11 +27,9 @@ A modern React-based, fully responsive record management application with create
 cd Form
 
 2. Install dependencies:
-```bash
 npm install
 
 3. Start the development server:
-```bash
 npm start
 
 The application will open in your browser at `http://localhost:3000`
@@ -39,7 +37,6 @@ The application will open in your browser at `http://localhost:3000`
 ### Build for Production
 
 To create an optimized production build:
-```bash
 npm run build
 ```
 
