@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive CRUD Form</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="app-shell">
+        <aside class="sidebar">
+            <div class="brand">Form Manager</div>
+            <nav class="nav-links">
+                <button class="nav-item active" data-section="form-section">Create Record</button>
+                <button class="nav-item" data-section="records-section">Manage Records</button>
+                <button class="nav-item" data-section="help-section">Help</button>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="topbar">
+                <h1>Responsive Record Manager</h1>
+                <button class="toggle-menu" aria-label="Toggle navigation">☰</button>
+            </header>
+
+            <section id="form-section" class="panel active-panel">
+                <div class="panel-card">
+                    <h2>Create or Update Record</h2>
+                    <form id="record-form" novalidate>
+                        <div class="form-grid">
+                            <label>
+                                Title
+                                <input type="text" id="title" name="title" placeholder="Record title" required />
+                                <span class="error" id="title-error"></span>
+                            </label>
+                            <label>
+                                Description
+                                <textarea id="description" name="description" placeholder="Short description"
+                                    required></textarea>
+                                <span class="error" id="description-error"></span>
+                            </label>
+                            <label>
+                                Link URL
+                                <input type="url" id="url" name="url" placeholder="https://example.com" />
+                                <span class="error" id="url-error"></span>
+                            </label>
+                            <label>
+                                Image URL
+                                <input type="url" id="image" name="image" placeholder="https://example.com/image.jpg" />
+                                <span class="error" id="image-error"></span>
+                            </label>
+                            <label>
+                                Notes
+                                <textarea id="notes" name="notes" placeholder="Any extra notes"></textarea>
+                            </label>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="primary-btn" id="save-btn">Save Record</button>
+                            <button type="button" class="secondary-btn" id="reset-btn">Reset</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <section id="records-section" class="panel">
+                <div class="panel-card">
+                    <div class="records-header">
+                        <h2>Saved Records</h2>
+                        <span id="record-count">0 records</span>
+                    </div>
+                    <div class="record-list" id="record-list">
+                        <p class="empty-state">No records yet. Add one from the create form.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- <section id="help-section" class="panel">
+                <div class="panel-card">
+                    <h2>How it works</h2>
+                    <ul>
+                        <li>Use the left menu to switch between creating a record and viewing records.</li>
+                        <li>Fill in the form and press Save to add a new record.</li>
+                        <li>Edit or delete records from the list.</li>
+                        <li>The layout adjusts for mobile, tablet, and desktop screens.</li>
+                    </ul>
+                </div>
+            </section> -->
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
